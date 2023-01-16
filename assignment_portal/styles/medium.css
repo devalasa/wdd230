@@ -1,0 +1,46 @@
+@media only screen and (min-width: 32.5em) {
+
+    header {
+        background-color: lightseagreen;
+        display: grid;
+        grid-template-columns: 200px auto;
+        justify-content: space-evenly;
+        border-radius: 20px;
+        width: 600px;
+        height: 150px;
+        margin-top: -100px;
+    }
+
+    .image {
+        border-radius: 20px;
+        height: 130px;
+        margin-left: 10px;
+        box-shadow: 0 0 10px 0 #50524d;
+    }
+
+    #title {
+        margin-left: 130px;
+        margin-top: -40px;
+        font-size: 20px;
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 20px;
+    }
+
+    h1 {
+        box-shadow: 0 0 50px 0 #50524d;
+        max-height: 30px;
+        max-width: 200px;
+        border-radius: 5px;
+    }
+
+    h4 {
+        margin-top: -53px;
+    }
+    h6 {
+        margin-left: -400px;
+        max-height: 10px;
+    }
+    
+}

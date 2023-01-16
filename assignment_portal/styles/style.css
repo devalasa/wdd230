@@ -7,29 +7,28 @@
 header {
     background-color: lightseagreen;
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-rows: 100px auto;
     border-radius: 20px;
-    justify-content: space-around;
-    width: 600px;
-    height: 150px;
+    max-width: 700px;
+    height: 250px;
     margin-top: 10px;
-}
-#my_image {
-    margin-left: 20px;
-}
-			
+}			
 
 .image {
     border-radius: 20px;
     height: 130px;
-    margin-top: 50px;
+    margin-left: 200px;
+    float: none;
+    margin-top: 15px;
     box-shadow: 0 0 10px 0 #50524d;
 }
 
 h1 {
-    box-shadow: 0 0 50px 0 #50524d;
     max-height: 30px;
-    border-radius: 5px;
+    max-width: 100%;
+    margin-top: 50px;
+    font-family: Lato;
+    text-align: center;
 }
 
 .home_title {
@@ -42,32 +41,36 @@ h1 {
 }
 .icon {
     width: 20px;
+    margin-top: -6px;
 }
 h3 {
     margin-left: -220px;
     margin-top: -2px;
 }
 
-a {
-    margin-left: 120px;
-    margin-top: -40px;
+#title {
+    margin-left: 80px;
+    margin-top: -22px;
+    font-size: 10px;
 }
 
-h1, h2, h3, h4, h5 {
+h2, h3, h4, h5, h6 {
     font-family: "Lato";
+    font-size: 10px;
 }
 
 p {
     font-style: italic;
+    text-align: center;
 }
 
 h4 {
-    margin-top: -53px;
+    margin-top: -33px;
+    align-self: center;
 }
 h6 {
-    margin-left: -320px;
+    margin-left: -200px;
     max-height: 10px;
-    font-size: 20px;
 }
 
 footer {
