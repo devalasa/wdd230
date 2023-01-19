@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
+
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+header, footer {
+    display: grid;
+    background-color: #0c2f57;
+    grid-template-rows: 100px auto;
+    max-width: 100%;
+}
+
+h1, h2 {
+    color: aliceblue;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2{
+    font-size: 35px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#principle1, #principle2, 
+#principle3 {
+    border: 3px solid #000;
+    border-radius: 20px;
+    margin: 15px;
+    max-width: 530px;
+    background-color: lightgrey;
+}
+
+#principle1 img, #principle2 img, #principle3 img {
+    max-width: 100%;
+}
+
+h3 {
+    font-size: 30px;
+    background-color: #0c2f57;
+    color: aliceblue;
+    padding-left: 10px;
+}
+
+
+h4 {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+h5 {
+    font-size: 20px;
+    color: aliceblue;
+    text-align: center;
+}
+h3, h4{
+    font-family: 'Open Sans', sans-serif;
+}
+p {
+    
+    font-family: 'Lato', sans-serif;
+    padding: 20px;
+}

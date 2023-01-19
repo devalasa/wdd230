@@ -1,0 +1,12 @@
+@media screen and (max-width: 32.5em) {
+    main {
+        display: block;
+    }
+    .img_3 {
+        padding: 0%;
+
+    }
+    h1 {
+        font-size: 40px;
+    }
+}
