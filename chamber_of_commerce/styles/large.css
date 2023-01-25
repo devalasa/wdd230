@@ -1,0 +1,36 @@
+#content {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+header, footer {
+	display: grid;
+	grid-template-rows: 1fr repeat(3);
+	justify-content: center;
+	background-color: light;
+}
+
+img {
+	max-height: 150px;
+	display: block;
+	margin: 0 auto;
+}
+
+h1 {
+	margin-top: -30px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+}
+nav a {
+	text-align: right;
+	max-width: fit-content;
+}
+
+h2, h3 {
+	text-align: center;
+}
+
+
