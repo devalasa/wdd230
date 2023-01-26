@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
 #content {
 	max-width: 1600px;
 	margin: 0 auto;
@@ -7,9 +9,12 @@ header, footer {
 	display: grid;
 	grid-template-rows: 1fr repeat(3);
 	justify-content: center;
-	background-color: light;
+	text-align: center;
+	background-color: #caa36f;
 }
-
+header {
+	height: 300px;
+}
 img {
 	max-height: 150px;
 	display: block;
@@ -25,12 +30,57 @@ nav {
 	justify-content: space-around;
 }
 nav a {
-	text-align: right;
 	max-width: fit-content;
+	font-family: Roboto;
 }
 
-h2, h3 {
-	text-align: center;
+nav a:hover {
+	background-color: #8d8787;
+	max-height: 30px;
+	border-radius: 5px;
+	color: #eeb161;
+	transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+	width: 100%;
 }
+
+h1, h2, h3, h5 {
+	text-align: center;
+	font-family: 'Open Sans';
+}
+
+/*Design CSS*/
+p {
+	font-family: Helvetica;
+	color: #04030f;
+	padding: 1em;
+  }
+  .colors {
+	width: 100%;
+	min-width: 350px;
+	margin: 30px auto;
+	text-align: center;
+  }
+  .colors th {
+	background-color: #999;
+  }
+  .colors td{
+	width: 25%;
+	height: 3em;
+  }
+  .primary {
+	background-color: #caa36f;
+  }
+  .secondary {
+	background-color: #b8afc0;
+  }
+  .accent1 {
+	background-color: #04030f;
+	color: #b8afc0;
+  }
+
+  p.colored {
+	background-color: #caa36f;
+  }
 
 
