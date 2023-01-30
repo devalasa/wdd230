@@ -1,0 +1,106 @@
+@media screen and (min-width: 64em) {
+    #content {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    header, footer {
+        max-width: 100%;
+    }
+    
+    #hamburgerBtn {
+        display: none;
+    }
+    
+    #heromsg {
+        display: flex;
+        text-align: left;
+        margin-left: 0px;
+        margin-top: -50px;
+    }
+
+    .hero_msg {
+        display: block;
+        text-align: left;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        text-align: center;
+        padding: .8rem 2vw;
+        text-decoration: none;
+        color: #333;
+        border: none;
+    }
+
+    .socs {
+        width: 60px;
+        margin-top: -40px;
+    }
+
+    #container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #s1_2 {
+        display: block;
+    }
+
+    #squares {
+        grid-column: 1/2;
+    }
+
+    .square1 {
+        grid-row: 1/2;
+        width: 200px;
+    }
+
+    .square2 {
+        width: 200px;
+    }
+
+    .square3 {
+        width: 200px;
+    }
+    
+    #rectangles {
+        grid-column: 2/3;
+    }
+
+    .rectangle1 {
+        width: 700px;
+        height: 422px;
+    }
+
+    .rectangle2 {
+        height: 200px;
+    }
+
+    #square_4 {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        height: 665px;
+    }
+
+    #first_half {
+        justify-content: space-around;
+    }
+
+    .fh_logo {
+        max-width: 500px;
+    }
+
+    h4 {
+        margin-top: 60px;
+    }
+
+    .cont_info {
+        margin-top: 60px;
+    }
+}

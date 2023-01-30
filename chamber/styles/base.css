@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
 
 #content {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -11,8 +11,17 @@ header {
     max-width: 100%;
 }
 
+#hero {
+    display: flex;
+}
+
+#heromsg {
+    display: flex;
+}
+
 #hero_box {
     display: flex;
+    justify-content: space-between;
 }
 
 #hero_img {
@@ -22,7 +31,7 @@ header {
 
 h1 {
     font-size: 20px;
-    font-family: 'Open Sans';
+    font-family: 'Roboto';
 }
 
 h2 {
@@ -35,11 +44,15 @@ h2 {
 h3 {
     font-size: 10px;
     font-family: 'Open Sans';
-    width: 200px;
+    max-width: 200px;
     text-align: center;
     border: 1px solid #6f7364;
     margin: 0 auto;
     padding: 0;
+}
+
+#socials {
+    display: flex;
 }
 
 .socs {
@@ -63,6 +76,9 @@ nav ul {
 }
 nav ul.open {
     display: block;
+    margin-left: -200px;
+    flex-direction: column;
+    margin-top: 50px;
 }
 
 nav ul li a {
@@ -72,7 +88,9 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     border-top: 1px solid rgba(0,0,0,0.5);
-}nav ul li a:hover {
+}
+
+nav ul li a:hover {
     background-color: rgba(0,0,0,0.3);
 }
 
@@ -100,6 +118,7 @@ nav ul li.active a {
 #container {
     display: grid;
     grid-template-rows: 1fr (repeat 6);
+    grid-gap: 5px;
 }
 
 #rectangles {
@@ -115,7 +134,16 @@ nav ul li.active a {
     background-color: #d3d3d3;
 }
 
-p.rectangle1 {
+.rectangle2 {
+    border: 1px solid #6f7364;
+    height: 200px;
+    font-family: helvetica;
+    font-style: italic;
+    padding-left: 20px;
+    background-color: #d3d3d3;
+}
+
+p.rectangle1, p.rectangle2{
     color: #6f7364;
 }
 
@@ -147,6 +175,7 @@ p.rectangle1 {
     height: 200px;
     font-family: helvetica;
     font-style: italic;
+    color: #6f7364;
     padding-left: 20px;
     background-color: #d3d3d3;
 }
