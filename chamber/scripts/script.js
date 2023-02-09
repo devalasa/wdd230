@@ -12,7 +12,7 @@ let daynames = [
 	"Tuesday",
 	"Wednesday",
 	"Thursday",
-	"Fridat",
+	"Friday",
 	"Saturday"
 ];
 let months = [

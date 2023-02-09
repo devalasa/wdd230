@@ -117,10 +117,8 @@ nav ul li.active a {
 
 #container {
     display: grid;
-    grid-template-rows: 1fr (repeat 6);
-    grid-gap: 5px;
+    grid-template-rows: 1fr;
 }
-
 #rectangles {
     grid-row: 1/2;
 }
