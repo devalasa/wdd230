@@ -1,6 +1,6 @@
 @media screen and (min-width: 32.5em) {
     #content {
-        max-width: 100%;
+        width: 900px;
         margin: 0 auto;
     }
     #hamburgerBtn {
@@ -41,15 +41,55 @@
     }
 
     .square1 {
-        width: 200px;
+        width: 500px;
     }
 
     .square2 {
-        width: 150px;
+        width: 400px;
+        text-align: center;
+    }
+
+    .weather, .wc {
+        margin-top: -15px;
     }
 
     #square_4 {
-        grid-row: 2/3;
+        grid-row: 3/3;
+        max-width: 900px;
+        display: flex;
+        height: 250px;
+        text-align: center;
+    }
+
+    .box {
+        width: 435px;
+        height: 220px;
+    }
+
+    .poof {
+        display: none;
+    }
+
+    .rectangles {
+        justify-content: center;
+    }
+
+    .rectangle1 {
+        width: 900px;
+    }
+
+    .rectangle1 img {
+        width: 900px;
+        height: 480px;
+    }
+
+    .rectangle1 a {
+        right: 30px;
+    }
+
+    .rectangle2 {
+        width: 900px;
+        font-size: 1rem;   
     }
 
     #first_half {

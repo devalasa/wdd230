@@ -2,14 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
 
 #content {
-    max-width: 500px;
-    margin: 0 auto;
+    width: 500px;
+    margin: 0px;
+    padding: 10px;
+    border: 0px;
 }
 
 header {
     background-color: #caa36f;
     max-width: 100%;
 }
+
+
 
 #hero {
     display: flex;
@@ -121,82 +125,175 @@ nav ul li.active a {
 }
 #rectangles {
     grid-row: 1/2;
+    max-width: 100%;
+    margin: 0;
+    height: 700px;
+    justify-content: center;
 }
 
 .rectangle1 {
-    border: 1px solid #6f7364;
+    position: relative;
     height: 200px;
     font-family: helvetica;
-    font-style: italic;
     padding-left: 20px;
-    background-color: #d3d3d3;
+    width: 500px;
+    gap: 20px;
+}
+.rectangle1 p  {
+    position: absolute;
+    font-family: "Rock Salt";
+    font-weight: 1000;
+    font-size: 30px;
+    color: #caa36f;
+}
+
+.rectangle1 a {
+    position: absolute;
+    width: 170px;
+    height: 30px;
+    top: 360px;
+    right: 20px;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    background-color: #f0c591;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.rectangle1 img {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 500px;
+    height: 400px;
 }
 
 .rectangle2 {
     border: 1px solid #6f7364;
+    width: 500px;
+    font-size: .82em;
     height: 200px;
     font-family: helvetica;
-    font-style: italic;
-    padding-left: 20px;
-    background-color: #d3d3d3;
+    background-color: #caa36f;
+    margin-top: 300px;
+    text-align: center;
 }
 
-p.rectangle1, p.rectangle2{
-    color: #6f7364;
+.rectangle1 p{
+    font-size: 1.5rem;
+    font-family: "Open Sans";
 }
 
 .square1 {
     grid-row: 2/3;
+    max-width: 500px;
     border: 1px solid #6f7364;
     height: 200px;
     font-family: helvetica;
+    text-align: center;
     font-style: italic;
-    padding-left: 20px;
     color: #6f7364;
-    background-color: #d3d3d3;
+    background-color: #caa36f;
+}
+
+.square1 h3 {
+    border: none;
+    font-style: normal;
+    font-family: helvetica;
+    font-weight: 800;
+    font-size: 1.2rem;
+    width: 300px;
+    margin-top: 20px;
+    color: black;
+}
+
+.square1 h4 {
+    text-align: center;
+    font-style: normal;
+    font-size: 1.5rem;
+    margin-top: -2px;
+    color: black;
+}
+
+.square1 p {
+    color: black;
+    font-style: normal;
+    font-size: 0.8rem;
 }
 
 .square2 {
     grid-row: 3/4;
     border: 1px solid #6f7364;
     height: 200px;
+    max-width: 350px;
+    margin: 0 auto;
     font-family: helvetica;
-    font-style: italic;
-    padding-left: 20px;
-    color: #6f7364;
-    background-color: #d3d3d3;
+    color: black;
+    background-color: #caa36f;
+}
+
+.weather {
+    display: block;
+}
+
+.w_img, .wc {
+    display: flex;
+    justify-content: space-around;
+}
+
+.w_img img {
+    width: 60px;
+}
+
+.pp {
+    text-align: center;
 }
 
 .square3 {
-    grid-row: 4/5;
-    border: 1px solid #6f7364;
-    height: 200px;
-    font-family: helvetica;
-    font-style: italic;
-    color: #6f7364;
-    padding-left: 20px;
-    background-color: #d3d3d3;
+    display: none;
 }
+
+
 
 #square_4 {
     grid-row: 5/7;
     border: 1px solid #6f7364;
+    max-width: 500px;
     height: 700px;
     font-family: helvetica;
     font-style: italic;
     justify-content: center;
-    background-color: #d3d3d3;
+    background-color: #caa36f;
 }
 
 .box {
     border: 1px solid #6f7364;
-    width: 300px;
+    width: 450px;
     height: 200px;
-    padding-left: 20px;
     margin: 0 auto;
+    background-color: #fff;
     margin-top: 20px;
-    color: #6f7364;
-    background-color: #d3d3d3;
+    color: black;
+    text-align: center;
+    font-style: normal;
+}
+
+.poof {
+    border: 1px solid #6f7364;
+    width: 450px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 20px;
+    color: black;
+    text-align: center;
+    font-style: normal;
+}
+
+.box img, .poof img {
+    width: 50px;
 }
 
 footer {
