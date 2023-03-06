@@ -98,7 +98,7 @@ nav ul li a:hover {
     background-color: rgba(0,0,0,0.3);
 }
 
-nav ul li.active a {
+nav ul li a.active {
     background-color: rgba(0,0,0,0.2);
     color: #fff;
 }
@@ -173,6 +173,7 @@ nav ul li.active a {
 .rectangle2 {
     border: 1px solid #6f7364;
     width: 500px;
+    padding-top: 5px;
     font-size: .82em;
     height: 200px;
     font-family: helvetica;
@@ -186,6 +187,11 @@ nav ul li.active a {
     font-family: "Open Sans";
 }
 
+#s1_2 {
+    padding-top: 20px;
+    gap: 15px;
+}
+
 .square1 {
     grid-row: 2/3;
     max-width: 500px;
@@ -196,6 +202,7 @@ nav ul li.active a {
     font-style: italic;
     color: #6f7364;
     background-color: #caa36f;
+    margin-top: 10px;
 }
 
 .square1 h3 {
@@ -232,6 +239,7 @@ nav ul li.active a {
     font-family: helvetica;
     color: black;
     background-color: #caa36f;
+    margin-top: 10px;
 }
 
 .weather {
@@ -266,6 +274,7 @@ nav ul li.active a {
     font-style: italic;
     justify-content: center;
     background-color: #caa36f;
+    margin-top: 10px;
 }
 
 .box {
@@ -278,6 +287,10 @@ nav ul li.active a {
     color: black;
     text-align: center;
     font-style: normal;
+}
+
+#ch {
+    margin-top: -100px;
 }
 
 .poof {

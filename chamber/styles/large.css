@@ -8,6 +8,16 @@
     header, footer {
         max-width: 100%;
     }
+
+    .banner {
+        text-align: center;
+    }
+
+    #hex {
+        text-align: right;
+        margin-top: -30px;
+        padding-right: 50px;
+    }
     
     #hamburgerBtn {
         display: none;

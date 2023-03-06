@@ -18,8 +18,9 @@
                 <nav>
                     <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
                     <ul id="primaryNav">
-                        <li><a href="#">Discover</a></li>
-                        <li class="active"><a href="#">Directory</a></li>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="#">Directory</a></li>
                         <li><a href="#">Join</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -43,6 +44,7 @@
                 </div>
             </div>
             <h3 class="date"></h3>
+            <div class="banner hide"><p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p> <div id="hex">&#10005;</div></div>
         </header>
         <main>
             <div id="container">
@@ -57,12 +59,13 @@
                             <p class="pp">Weather</p>
                             <div class="weather">
                                 <div class="w_img">
-                                    <img src="images/weather_icons_dovora_interactive/PNG/128/day_partial_cloud.png" alt="Cloudy day">
-                                    <p>31°C</p>
+                                    <img id="weather_icon" src="images/weather_icons_dovora_interactive/PNG/128/day_partial_cloud.png" alt="Cloudy day">
+                                    <p><span id="temp">31</span>°C</p>
                                 </div>
                                 <div class="wc">
-                                    <p>Wind Speed: 3.84km/h</p>
-                                    <p>Wind Chill: N/A</p>
+                                    <p id="location_waether"></p>
+                                    <p>Wind Speed:<span id="wind_speed">7</span>km/h</p>
+                                    <p>Wind Chill:<span id="wind_chill">N/A</p></span>
                                 </div>
                             </div>
                             <p class="pp">Lagos - Clouds</p> 
@@ -87,7 +90,7 @@
                         <img src="images/lccc.webp" alt="lcc chamber logo">
                         <p>lcci@lagoschamber.com</p>
                         <p>Tel: +234 700 524 6724</p>
-                        <p id="ch">https://www.lagoschamber.com</p>
+                        <p id="ch">www.lagoschamber.com</p>
                     </section>
                     <div class="poof">
                         <h4>FlexiP Group</h4>
@@ -98,7 +101,11 @@
                 </div>
                 <div id="rectangles">
                     <div class="rectangle1">
-                        <img src="images/ikcc.jpg" alt="Image of HQ">
+                        <picture>
+                            <source media="(max-width: 500px)" srcset="images/wdd230-org_500.jpg">
+                            <source media="(max-width: 800px)" srcset="images/wdd230-org_800.jpg">
+                            <img src="images/wdd230-org.jpg" alt="Meeting with stakeholders">
+                        </picture>
                         <p>Welcome To Ikeja</p>
                         <a href="#">Join The Chamber</a>
                     </div>
