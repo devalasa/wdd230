@@ -1,5 +1,4 @@
 body {
-    padding: 0;
     margin: 0 auto;
     background-color: rgba(124, 100, 100, 0.842);
     max-width: 400px;
@@ -11,14 +10,14 @@ header {
 }
 
 main img[data-src] {
-    filter: blur(4px);
+    filter: blur(5px);
     opacity: 5%;
     transform: translateX(20rem);
 }
 
 main img {
     filter: blur(0px);
-    transition: all 0.2s;
+    transition: all 0.8s;
     opacity: 100%;
     transform: translateX(0rem);
 }
