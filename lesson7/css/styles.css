@@ -10,14 +10,13 @@ header {
 }
 
 main img[data-src] {
-    filter: blur(5px);
+    filter: blur(4px);
     opacity: 5%;
     transform: translateX(20rem);
 }
 
 main img {
-    filter: blur(0px);
-    transition: all 0.8s;
+    transition: all 0.2s;
     opacity: 100%;
     transform: translateX(0rem);
 }
