@@ -1,0 +1,24 @@
+body {
+    padding: 0;
+    margin: 0 auto;
+    background-color: rgba(124, 100, 100, 0.842);
+    max-width: 400px;
+    text-align: center;
+}
+
+header {
+    padding: 100px 0 100px 0;
+}
+
+main img[data-src] {
+    filter: blur(4px);
+    opacity: 5%;
+    transform: translateX(20rem);
+}
+
+main img {
+    filter: blur(0px);
+    transition: all 0.2s;
+    opacity: 100%;
+    transform: translateX(0rem);
+}
