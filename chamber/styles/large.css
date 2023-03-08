@@ -232,4 +232,32 @@
     .cont_info {
         margin-top: 60px;
     }
+
+    /*Discover Page*/
+    #gallery {
+        max-width: 1300px;
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+        gap: 20px;
+    }
+
+    .images:hover {
+        height: 100%;
+        width: 100%;
+        transform: scale(1.05);
+        transition: transform .5s;
+        box-shadow: 5px 5px 10px #6f7364;
+    }
+
+    .images h1, .images p {
+        grid-column: 2/2;
+    }
+
+    .images p {
+        margin-top: -350px;
+    }
 }

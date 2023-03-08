@@ -42,10 +42,6 @@ document.querySelector(".update").textContent = lastUpdate;
 
 
 //WEATHER!
-const spot1 = document.getElementById("spot1");
-const spot2 = document.getElementById("spot2");
-const spot3 = document.getElementById("spot3");
-const directoryUrl = "https://kelvin-aj.github.io/wdd230/chamber/json/data.json";
 const windSpeed = document.querySelector("#wind_speed");
 const windchill = document.querySelector("#wind_chill");
 const temperature = document.querySelector("#temp");
@@ -83,46 +79,18 @@ function calcChill(){
     }
 }
 
-const fillUpSpotlight = function(directory){
-    let tempList = [];
-    directory.forEach(company => {
-        if((tempList.length < 3) || (company.membership == "Gold" || company.membership == "Silver")){
-            tempList.push(company);
-        };
-    });
-    spot1.innerHTML = 
-    `
-                <h2>${tempList[1].name}</h2>
-                <img src="${tempList[1].logoURL}" alt="${tempList[1].name} logo">
-                <hr>
-                <p>${tempList[1].email}</p>
-                <p>${tempList[1].phoneNumber} | ${tempList[1].websiteURL}</p>`
-    spot2.innerHTML = 
-    `
-                <h2>${tempList[2].name}</h2>
-                <img src="${tempList[2].logoURL}" alt="${tempList[2].name} logo">
-                <hr>
-                <p>${tempList[2].email}</p>
-                <p>${tempList[2].phoneNumber} | ${tempList[2].websiteURL}</p>`
-    spot3.innerHTML = 
-    `
-                <h2>${tempList[3].name}</h2>
-                <img src="${tempList[3].logoURL}" alt="${tempList[3].name} logo">
-                <hr>
-                <p>${tempList[3].email}</p>
-                <p>${tempList[3].phoneNumber} | ${tempList[3].websiteURL}</p>`
-}
-
-
-// Spotlight
-async function getandshowSpotlight() {
-    const response = await fetch(directoryUrl);
-    const jsonObject = await response.json();
-    const directory = jsonObject.directory;
-    fillUpSpotlight(directory);
-    };
-
-getandshowSpotlight();
 
 getWeather();
 calcChill();
+
+const visitsDisplay = document.querySelector("#visits");
+let numVisits = Number(window.localStorage.getItem("visits-ls"));
+if (numVisits !== 0) {
+    visitsDisplay.textContent = numVisits;
+    console.log("It works")
+} else {
+    visitsDisplay.textContent = `This is your first visit!`;
+    console.log("This is your first visit!")
+}
+numVisits++;
+localStorage.setItem("visits-ls", numVisits);

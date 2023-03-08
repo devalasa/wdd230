@@ -1,6 +1,5 @@
 @media screen and (min-width: 32.5em) {
     #content {
-        width: 900px;
         margin: 0 auto;
     }
     #hamburgerBtn {
@@ -118,4 +117,16 @@
         margin-top: 20px;
         padding-right: 50px;
     }
+}
+
+/*Discover Page*/
+
+#gallery {
+    max-width: 800px;
+    text-align: center;
+    padding: 0px 50px 0px 50px;
+}
+
+.images p {
+    font-size: 1.5rem;
 }
