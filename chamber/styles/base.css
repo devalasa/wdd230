@@ -62,12 +62,12 @@ h3 {
 
 .socs {
     width: 25px;
-    margin-top: 23px;
-    margin-left: -50px;
+    margin-top: -13px;
+    margin-left: -15px;
 }
 
 #socs {
-    width: 150px;
+    width: 53px;
     margin-top: -50px;
 }
 
@@ -361,11 +361,13 @@ footer img {
 #gallery {
     max-width: 500px;
     text-align: left;
-    padding: 0px 0px 0px 0px;
+    padding: 0;
 }
 
 .images p{
     font-size: 1.2rem;
+    text-align: left;
+    max-width: 500px;
 }
 
 .visits{
