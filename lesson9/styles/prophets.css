@@ -1,0 +1,26 @@
+header {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+section {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+    background-color: antiquewhite;
+    box-shadow: 0 0 10px grey;
+    margin: 10px;
+}
+
+img {
+    max-width: 300px;
+    box-shadow: 0 0 10px grey;
+    height: 300px;
+}
+
