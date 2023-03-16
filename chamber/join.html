@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="description" content="Ikeja City Chamber of Commerce">
+    <title>Ikeja City Chamber of Commerce</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+    <div id="content">
+        <header>
+                <nav>
+                    <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+                    <ul id="primaryNav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a class="active" href="join.html">Join</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </nav>
+            <div id="hero_box">
+                <div id="heromsg">
+                    <a href="index.html"><img id="hero_img" src="images/logo.jpg" alt="logo image"></a>
+                    <div class="hero_msg">
+                        <h1>Ikeja City</h1>
+                        <h2>Chamber of Commerce</h2>
+                    </div>
+                </div>
+
+                <div id="socials">
+                    <a href="https://github.com/" target="_blank">
+                        <img class="socs" src="images/github_logo.jpg" alt="github logo">
+                    </a>
+                    <a href="https://facebook.com/" target="_blank">
+                        <img id="socs" class="socs" src="images/facebook_logo.jpg" alt="facebook logo">
+                    </a>
+                </div>
+            </div>
+            <h3 class="date"></h3>
+            <div class="banner hide"><p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p> <div id="hex">&#10005;</div></div>
+        </header>
+        <main>
+            <div class="top_msg">
+                <h1>Join Us At Ikeja City!</h1>
+                <p>Our strength at the Island of Victoria is in our members. And with all the benefits we offer from connections, business advisory services, Networking Opportunities, discounts for participation at the International Trade Fair, and a lot of business development services, It's a win-win situation. Help us grow as we help you grow.</p>
+            </div>
+            <form method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label class="top">First Name* <input type="text" name="fname" required></label>
+                    <label  class="top">Last Name* <input type="text" name="lname" required></label>
+                    <label class="top">Phone <input type="tel" name="phone"></label>
+                    <label class="top">Email* <input type="email" name="email"  placeholder="someone@domain.com" required></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Business Information</legend>
+                    <label class="top">Business Name* <input type="text" name="business-name" required></label>
+                    <label class="top">Business Position*  <input type="text" name="business-position" pattern="[A-Za-z\s\-]{7,}" title="Please enter at least 7 characters of letters, hyphens, and spaces." required></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Memberships</legend>
+                    <div>Membership Options*</div>
+                    <div class="join_table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="header" colspan="5">Ikeja City Chamber Membership Options
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th class="title">Premium offers</th>
+                                    <th class="title">Non-Profit</th>
+                                    <th class="title">Bronze</th>
+                                    <th class="title">Silver</th>
+                                    <th class="title">Gold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Fee per month</th>
+                                    <td>Free</td>
+                                    <td>#500,000</td>
+                                    <td>#1,000,000</td>
+                                    <td>#2,000,000</td>
+                                </tr>
+                                <tr>
+                                    <th>Advertising</th>
+                                    <td>❌</td>
+                                    <td>Directory</td>
+                                    <td>Directory<br>Print</td>
+                                    <td>Directory<br>Print<br>Website</td>              
+                                </tr>
+                                <tr>
+                                    <th>Event Discounts</th>
+                                    <td>❌</td>
+                                    <td>✔</td>
+                                    <td>✔<br>#5,000 fee/person</td>
+                                    <td>✔</td>
+                                </tr>
+                                <tr>
+                                    <th>Marquee Listing</th>
+                                    <td>1x a year</td>
+                                    <td>2x a year</td>
+                                    <td>2x a year</td>
+                                    <td>4x a year</td>
+                                </tr>
+                                <tr>
+                                    <th>Sponsorships</th>
+                                    <td>✔</td>
+                                    <td>✔<br>#100,000/min deposit</td>
+                                    <td>✔<br>#50,000/min deposit</td>
+                                    <td>✔<br>#20,000/min deposit</td>
+                                </tr>
+                                <tr>
+                                    <th>Training</th>
+                                    <td>❌</td>
+                                    <td>✔</td>
+                                    <td>✔<br>#10,000 fee/person</td>
+                                    <td>✔</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <label class="sbs"><input type="radio" name="membership" value="np">NP Membership</label>
+                    <label class="sbs"><input type="radio" name="membership" value="bronze">Bronze Membership</label>
+                    <label class="sbs"><input type="radio" name="membership" value="silver">Silver Membership</label>
+                    <label class="sbs"><input type="radio" name="membership" value="gold">Gold Membership</label>
+                </fieldset>
+                <div id="bd">
+                    <label class="top">Business Description
+                    </label>                
+                    <textarea name="business-description"></textarea>
+                </div>
+                <input type="submit" value="Join The Chamber" class="submitBtn">
+            </form>
+        </main>
+        <footer>
+            <div id="first_half">
+                <div class="fhfh">
+                    
+                    <img class="fh_logo" src="images/logo.jpg" alt="webpage logo">
+                    <div class="fhfhsh">
+                        <h4>Ikeja City Chamber of Commerce <br>
+                            10 Opebi Road, Opp Sweet Sensation <br>
+                            Ikeja Lagos
+                        </h4>
+                    </div>
+                </div>
+                <div class="shfh">
+                    <p class="cont_info">info@icccnigeria.org <br>+2348129376303 <br>📍 Location Map</p>
+                </div>
+            </div>
+            <div id="second_half">
+                <h5 class="copy"></h5>
+                <h6 class="update"></h6>
+            </div>
+        </footer>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

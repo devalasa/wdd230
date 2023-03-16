@@ -373,3 +373,151 @@ footer img {
     text-align: center;
     font-size: 1.5rem;
 }
+
+/*-----------JOIN PAGE-----------*/
+
+.top_msg {
+    max-width: 100%;
+    text-align: center;
+}
+
+.top_msg p{
+    text-align: left;
+}
+form fieldset {
+    margin: 2rem;
+    border: 1px solid #445ba9;
+    border-radius: 10px;
+    padding: .5rem 2%;
+}
+
+form legend {
+    color: #445ba9;
+    margin: 0 .1rem;
+    padding: 0 .5rem;
+}
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: #caa36f;
+    font-size: .8rem;
+}
+
+form label.top input {
+    display: block;
+    font-size: 1rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 0.75rem;
+    color: #555;
+    width: 80%;
+    max-width: 20rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+form label.sbs {
+    display: block;
+    padding: 0.75rem 0;
+    color: #555;
+}
+
+form input.submitBtn {
+    border: none;
+    background-color: #caa36f;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.75rem 1.5rem;
+    margin: 0 0 2rem 2%;
+    width: 96%;
+    max-width: 20rem;
+}
+
+form label.top input:required {
+    border-bottom: #caa36f solid 6px;
+}
+
+table {
+    max-width: 15rem;
+}
+
+.join_table {
+    max-width: 100px;
+}
+
+th {
+    font-family:'Bree Serif', serif;
+    font-size: .7rem;
+    letter-spacing: 1px;
+}
+
+td {
+    font-family:'Bree Serif', serif;
+    font-size: .5rem;
+    letter-spacing: 1px;
+}
+
+
+tr:nth-child(even) {
+    background-color: #caa36f;
+}
+
+tr:nth-child(odd) {
+    border: none;
+}
+
+
+.join_table .header, .jointable .title {
+    font-family: 'Noto Sans Adlam Unjoined', sans-serif;
+}
+
+.join_table .header {
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: #B58F40;
+    border: none;
+    color:#EBE7DE;
+    letter-spacing: 2px;
+}
+
+.join_table .title {
+    text-align: center;
+    font-size: .7rem;
+    border: none;
+    background-color: #caa36f;
+    color: #EBE7DE;
+    letter-spacing: 2px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 4px;
+    text-align: center;
+}
+
+#bd textarea {
+    border-bottom: #caa36f solid 6px;
+    padding: 4.5rem;
+    border-radius: 5px;
+}
+#bd {
+    padding-bottom: 10px;
+    padding-left: 10%;
+    display: block;
+}
+
+form {
+    border: 1px solid #555;
+    justify-content: center;
+    width: 350px;
+    max-width: 400px;
+    margin-left: 20px;
+    margin-top: 10px;
+    box-shadow: 0 0 4px grey;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

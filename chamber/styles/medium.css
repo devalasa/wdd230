@@ -117,16 +117,51 @@
         margin-top: 20px;
         padding-right: 50px;
     }
-}
 
-/*Discover Page*/
+    /*Discover Page*/
 
-#gallery {
-    max-width: 800px;
-    text-align: center;
-    padding: 0px 50px 0px 50px;
-}
+    #gallery {
+        max-width: 800px;
+        text-align: center;
+        padding: 0px 50px 0px 50px;
+    }
 
-.images p {
-    font-size: 1.5rem;
+    .images p {
+        font-size: 1.5rem;
+    }
+    /*-----------JOIN PAGE-----------*/
+
+    .top_msg {
+        max-width: 36rem;
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 30px;
+    }
+    .top_msg p {
+        font-size: 1.1rem;
+    }
+
+    form {
+        max-width: 36rem;
+        justify-content: center;
+        width: 34rem;
+        margin: 0 auto;
+    }
+    fieldset {
+        width: 28rem;
+    }
+    form label.top, form div {
+        font-size: 1rem;
+    }
+
+    #bd textarea {
+        padding: 10rem;
+    }
+    #bd {
+        padding-left: 6%;
+    }
+
+    form input.submitBtn {
+        margin: 0 0 2rem 20%;
+    }
 }

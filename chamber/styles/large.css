@@ -265,4 +265,52 @@
     .images p {
         margin-top: -350px;
     }
+
+    .top_msg {
+        max-width: 64rem;
+    }
+    .top_msg p {
+        font-size: 1.2rem;
+    }
+
+    form {
+        max-width: 64rem;
+        justify-content: center;
+        width: 62rem;
+        margin: 0 auto;
+    }
+
+    fieldset {
+        width: 56rem;
+    }
+
+    form label.top, form div  {
+        font-size: 1.1rem;
+    }
+
+    form div {
+        margin-top: -20px;
+        padding-bottom: 10px;
+    }
+
+    form label.sbs {
+        padding: 0.4rem 0;
+    }
+
+    #bd textarea {
+        padding: 24rem;
+    }
+    #bd {
+        padding-left: 3.5%;
+    }
+
+    form input.submitBtn {
+        margin: 0 0 2rem 20%;
+    }
+
+    main .ty {
+        font-size: 3rem;
+        text-align: center;
+        padding: 300px 0 300px 0;
+    }
 }
