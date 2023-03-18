@@ -30,8 +30,8 @@ const displayDirectory = (directory) => {
         img.setAttribute("src", company.logoURL);
         img.setAttribute("alt", `Logo of ${company.name}`);
         img.setAttribute("loading", "lazy");
-        img.setAttribute("width", "200");
-        img.setAttribute("height", "200");
+        img.setAttribute("width", "100");
+        img.setAttribute("height", "100");
 
         // Build the paragraph element
         membership.textContent = `Membership: ${company.ID} ${company.membership} level`;
@@ -54,4 +54,24 @@ const displayDirectory = (directory) => {
 
         cards.appendChild(directory_container);
     })
+}
+
+
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+const display = document.querySelector(".grid");
+
+// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+
+gridbutton.addEventListener("click", () => {
+	// example using arrow function
+	display.classList.add("grid");
+	display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+	display.classList.add("list");
+	display.classList.remove("grid");
 }

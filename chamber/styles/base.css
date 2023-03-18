@@ -526,3 +526,79 @@ form {
   display: table;
   clear: both;
 }
+
+/*--------DIRECTORY------*/
+
+main div.directory {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.dc {
+    text-align: center;
+}
+
+#grid, #list {
+    margin-bottom: 20px;
+    background-color: #caa36f;
+}
+
+.directory img {
+    box-shadow: 0 0 10px grey;
+    border-radius: 10px;
+}
+
+.directory section {
+    box-shadow: 0 0 10px grey;
+    padding: 0px;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.directory a {
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.directory h2 {
+    font-style: normal;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.directory p {
+    font-size: 1rem;
+}
+
+.directory a, .directory h2, .directory p {
+    margin-left: 40px;
+}
+
+.list {
+	display: block;
+	flex-direction: column;
+}
+
+.list section {
+	margin: 0 auto;
+	padding: 0.25rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+.list section h3 {
+	font-size: 1rem;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.list section:nth-child(even) {
+	background-color: #1315168e;
+}

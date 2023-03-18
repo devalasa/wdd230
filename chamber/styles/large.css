@@ -313,4 +313,14 @@
         text-align: center;
         padding: 300px 0 300px 0;
     }
+
+    .directory section:hover {
+    height: 100%;
+    width: 100%;
+    transform: scale(1.05);
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+    background-color: #caa36f;
+    color: white;
+    }
 }
