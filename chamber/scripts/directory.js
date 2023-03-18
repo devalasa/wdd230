@@ -30,8 +30,8 @@ const displayDirectory = (directory) => {
         img.setAttribute("src", company.logoURL);
         img.setAttribute("alt", `Logo of ${company.name}`);
         img.setAttribute("loading", "lazy");
-        img.setAttribute("width", "400");
-        img.setAttribute("height", "450");
+        img.setAttribute("width", "200");
+        img.setAttribute("height", "200");
 
         // Build the paragraph element
         membership.textContent = `Membership: ${company.ID} ${company.membership} level`;
