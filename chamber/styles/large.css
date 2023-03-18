@@ -82,7 +82,7 @@
     .square1 {
         grid-row: 1/2;
         width: 200px;
-        margin-top: 10px;
+        margin-top: -10px;
     }
 
     .square1 h3 {
