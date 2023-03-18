@@ -439,10 +439,7 @@ form label.top input:required {
 
 table {
     max-width: 15rem;
-}
-
-.join_table {
-    max-width: 100px;
+    margin: 0 auto;  
 }
 
 th {
@@ -460,21 +457,22 @@ td {
 
 tr:nth-child(even) {
     background-color: #caa36f;
+    color: #EBE7DE;
 }
 
 tr:nth-child(odd) {
     border: none;
 }
 
-.join_table {
-    margin: 20px;
+#join_table {
+    margin: 0 auto;
 }
 
-.join_table .header, .jointable .title {
+#join_table .header, .jointable .title {
     font-family: 'Noto Sans Adlam Unjoined', sans-serif;
 }
 
-.join_table .header {
+#join_table .header {
     text-align: center;
     font-size: 1.1rem;
     background-color: #B58F40;
@@ -483,7 +481,7 @@ tr:nth-child(odd) {
     letter-spacing: 2px;
 }
 
-.join_table .title {
+#join_table .title {
     text-align: center;
     font-size: .7rem;
     border: none;

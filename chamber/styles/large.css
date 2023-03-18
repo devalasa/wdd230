@@ -280,6 +280,29 @@
         margin: 0 auto;
     }
 
+    table {
+        max-width: 60rem;
+        height: 25rem;
+        margin: 0 auto;  
+    }
+
+    th {
+        font-family:'Bree Serif', serif;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    
+    td {
+        font-family:'Bree Serif', serif;
+        font-size:  1rem;
+        letter-spacing: 1px;
+    }
+
+    form label.top input {
+        width: 90%;
+        max-width: 50rem;
+    }
+
     fieldset {
         width: 56rem;
     }
@@ -298,14 +321,16 @@
     }
 
     #bd textarea {
-        padding: 24rem;
+        padding: 4.5rem;
     }
     #bd {
         padding-left: 3.5%;
     }
 
     form input.submitBtn {
-        margin: 0 0 2rem 20%;
+        margin: 0 0 2rem 5%;
+        max-width: 90%;
+        font-size: 1.1rem;
     }
 
     main .ty {

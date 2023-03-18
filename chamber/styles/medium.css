@@ -147,15 +147,41 @@
         width: 34rem;
         margin: 0 auto;
     }
+
+    table {
+        max-width: 30rem;
+        height: 25rem;
+        margin: 0 auto;  
+    }
+
+    th {
+        font-family:'Bree Serif', serif;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    td {
+        font-family:'Bree Serif', serif;
+        font-size:  0.9rem;
+        letter-spacing: 1px;
+    }
+
     fieldset {
         width: 28rem;
     }
+
     form label.top, form div {
         font-size: 1rem;
     }
 
+
+    form label.top input {
+        width: 90%;
+        max-width: 25rem;
+    }
+
     #bd textarea {
-        padding: 10rem;
+        padding: 3.5rem;
     }
     #bd {
         padding-left: 6%;
