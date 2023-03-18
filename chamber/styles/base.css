@@ -466,6 +466,9 @@ tr:nth-child(odd) {
     border: none;
 }
 
+.join_table {
+    margin: 20px;
+}
 
 .join_table .header, .jointable .title {
     font-family: 'Noto Sans Adlam Unjoined', sans-serif;
@@ -497,7 +500,9 @@ table, th, td {
 
 #bd textarea {
     border-bottom: #caa36f solid 6px;
-    padding: 4.5rem;
+    padding: 0.75rem;
+    width: 250px;
+    max-width: 300px;
     border-radius: 5px;
 }
 #bd {
