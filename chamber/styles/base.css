@@ -237,6 +237,7 @@ nav ul li a.active {
 }
 
 .square2 {
+    text-align: center;
     grid-row: 3/4;
     border: 1px solid #6f7364;
     height: 200px;

@@ -1,3 +1,48 @@
+const windSpeed = document.querySelector("#wind_speed");
+const temperature = document.querySelector("#temp");
+const weatherIcon = document.querySelector("#weather_icon");
+const captionDesc = document.querySelector("figcaption");
+const url = "https://api.openweathermap.org/data/2.5/weather?q=Lagos&units=metric&appid=0bd19d55bfadd336edf90cb971181d59";
+
+
+async function weatherFetch() {
+	try {
+		const response = await fetch(url);
+		if (response.ok) {
+			const data = await response.json();
+			displayResults(data);
+		} else {
+			throw Error(await response.text());
+		}
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+weatherFetch();
+
+function displayResults(weatherData) {
+	temperature.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
+	windSpeed.innerHTML = `${weatherData.wind.speed.toFixed(0)}`;
+
+	const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+	const desc = weatherData.weather[0].description;
+	const weatherLocation = weatherData.name
+
+	weatherIcon.setAttribute("src", iconsrc);
+	weatherIcon.setAttribute("alt", desc);
+	captionDesc.textContent = `${weatherLocation} - ${desc}`; 
+}
+
+const windchill = Math.round(35.74 + (0.6215 * temperature) - (35.75 * (windSpeed ** 0.16)) + (0.4275 * temperature * (windSpeed ** 0.16)));
+
+if (temperature <= 50 && windSpeed > 3) {
+    document.querySelector("#wind_chill").innerHTML = `${windchill}&deg;C`;
+} else {
+    document.querySelector("#wind_chill").innerHTML = ("N/A");
+}
+
+
 function toggleMenu() {
     document.getElementById('primaryNav').classList.toggle('open');
     document.getElementById('hamburgerBtn').classList.toggle('open');
@@ -50,3 +95,5 @@ if (date == "Monday" || date == "Tuesday") {
     document.querySelector("#hex").addEventListener("click", function() {
         this.closest(".banner").style.display = "none";
 });
+
+
