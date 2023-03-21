@@ -2,12 +2,12 @@ const windSpeed = document.querySelector("#wind_speed");
 const temperature = document.querySelector("#temp");
 const weatherIcon = document.querySelector("#weather_icon");
 const captionDesc = document.querySelector("figcaption");
-const url = "https://api.openweathermap.org/data/2.5/weather?q=Lagos&units=metric&appid=0bd19d55bfadd336edf90cb971181d59";
-
+const weather_url = "https://api.openweathermap.org/data/2.5/weather?q=Lagos&units=metric&appid=0bd19d55bfadd336edf90cb971181d59";
+const directoryURL = ""
 
 async function weatherFetch() {
 	try {
-		const response = await fetch(url);
+		const response = await fetch(weather_url);
 		if (response.ok) {
 			const data = await response.json();
 			displayResults(data);
@@ -38,8 +38,6 @@ const windchill = Math.round(35.74 + (0.6215 * temperature) - (35.75 * (windSpee
 
 if (temperature <= 50 && windSpeed > 3) {
     document.querySelector("#wind_chill").innerHTML = `${windchill}&deg;C`;
-} else {
-    document.querySelector("#wind_chill").innerHTML = ("N/A");
 }
 
 
@@ -93,7 +91,8 @@ if (date == "Monday" || date == "Tuesday") {
 };
 
     document.querySelector("#hex").addEventListener("click", function() {
-        this.closest(".banner").style.display = "none";
+        document.querySelector(".hide").style.display = "none";
+
 });
 
 

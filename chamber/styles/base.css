@@ -11,7 +11,9 @@ header {
     max-width: 100%;
 }
 
-
+.banner {
+    text-align: center;
+}
 
 #hero {
     display: flex;
@@ -360,6 +362,11 @@ footer img {
     transform: translateY(10rem);
     transition: all 0.5s;
 }   
+
+.images {
+    padding-left: 10px;
+}
+
 .view{
     opacity: 100%;
     filter: blur(0px);
