@@ -400,6 +400,12 @@ footer img {
 .top_msg p{
     text-align: left;
 }
+
+form {
+    animation-name: slideup;
+    animation-duration: 0.5s;
+}
+
 form fieldset {
     margin: 2rem;
     border: 1px solid #445ba9;
@@ -636,4 +642,23 @@ main div.directory {
 #contact iframe {
     padding-bottom: 40px;
     max-width: 400px;
+}
+
+/*-----FEEDBACK------*/
+#fb {
+    display: flex;
+    font-size: 1.5rem;
+    font-family: "Open Sans";
+}
+
+.fbp {
+    padding: 0px 10px 0px 10px;
+    color: #caa36f;
+}
+
+@keyframes slideup{
+    from{
+        transform: translateY(20vh);
+        opacity: 10%;
+    }
 }

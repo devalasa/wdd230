@@ -3,7 +3,7 @@
 table {
 	margin: 10px auto;
 	border: 1px solid #555;
-	box-shadow: 1px thin #555;
+    box-shadow: 0 0 10px grey;
 	border-collapse: collapse;
 }
 
