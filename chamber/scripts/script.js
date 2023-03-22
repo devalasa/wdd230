@@ -4,7 +4,7 @@ const weatherIcon = document.querySelector("#weather_icon");
 const captionDesc = document.querySelector("figcaption");
 const weather_url = "https://api.openweathermap.org/data/2.5/weather?q=Lagos&units=metric&appid=0bd19d55bfadd336edf90cb971181d59";
 const directoryUrl = "https://devalasa.github.io/wdd230/chamber/json/data.json";
-const spot1 = document.getElementById("spot_11");
+const spot1 = document.getElementById("spot_1");
 const spot2 = document.getElementById("spot_2");
 const spot3 = document.getElementById("spot_3");
 const fillUpSpotlight = function(directory){
@@ -16,25 +16,25 @@ const fillUpSpotlight = function(directory){
     });
     spot1.innerHTML = 
     `
-                <h2>${tempList[1].name}</h2>
+                <h4>${tempList[1].name}</h4>
                 <img src="${tempList[1].logoURL}" alt="${tempList[1].name} logo">
-                <hr>
                 <p>${tempList[1].email}</p>
-                <p>${tempList[1].phoneNumber} | ${tempList[1].websiteURL}</p>`
+                <p>${tempList[1].phoneNumber}</p>
+				<a href="${tempList[1].websiteURL}">${tempList[1].websiteURL}</a>`
     spot2.innerHTML = 
     `
-                <h2>${tempList[2].name}</h2>
+                <h4>${tempList[2].name}</h4>
                 <img src="${tempList[2].logoURL}" alt="${tempList[2].name} logo">
-                <hr>
-                <p>${tempList[2].email}</p>
-                <p>${tempList[2].phoneNumber} | ${tempList[2].websiteURL}</p>`
+                <p class="highlight">${tempList[2].email}</p>
+                <p>${tempList[2].phoneNumber}</p>
+				<a href="${tempList[1].websiteURL}">${tempList[1].websiteURL}</a>`
     spot3.innerHTML = 
     `
-                <h2>${tempList[3].name}</h2>
+                <h4>${tempList[3].name}</h4>
                 <img src="${tempList[3].logoURL}" alt="${tempList[3].name} logo">
-                <hr>
                 <p>${tempList[3].email}</p>
-                <p>${tempList[3].phoneNumber} | ${tempList[3].websiteURL}</p>`
+                <p>${tempList[3].phoneNumber}</p>
+				<a href="${tempList[1].websiteURL}">${tempList[1].websiteURL}</a>`
 }
 
 // Spotlight

@@ -280,6 +280,7 @@ nav ul li a.active {
     max-width: 500px;
     height: 700px;
     font-family: helvetica;
+    padding-bottom: 150px;
     font-style: italic;
     justify-content: center;
     background-color: #caa36f;
@@ -289,7 +290,7 @@ nav ul li a.active {
 .box {
     border: 1px solid #6f7364;
     width: 450px;
-    height: 200px;
+    height: 250px;
     margin: 0 auto;
     background-color: #fff;
     margin-top: 20px;
@@ -305,7 +306,7 @@ nav ul li a.active {
 .poof {
     border: 1px solid #6f7364;
     width: 450px;
-    height: 200px;
+    height: 250px;
     margin: 0 auto;
     background-color: #fff;
     margin-top: 20px;

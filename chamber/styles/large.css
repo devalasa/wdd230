@@ -187,18 +187,19 @@
         display: block;
         grid-column: 3/4;
         grid-row: 1/2;
-        height: 725px;
-        width: 300px;
+        height: 630px;
+        width: 350px;
         margin-left: 50px;
+        text-align: center;
     }
 
     .box {
-        width: 250px;
+        width: 300px;
     }
 
     .poof {
         display: block;
-        width: 250px;
+        width: 300px;
     }
 
     .poof h4 {
@@ -347,5 +348,8 @@
     box-shadow: 5px 5px 10px #6f7364;
     background-color: #caa36f;
     color: white;
+    }
+    #spot_2 p.highlight {
+        margin-left: 20px;
     }
 }
