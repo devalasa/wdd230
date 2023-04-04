@@ -4,7 +4,7 @@ const url = "https://brotherblazzard.github.io/canvas-content/fruit.json";
 async function getDirectoryData() {
     const response = await fetch(url);
     const data = await response.json();
-    console.table(data);
+    // console.table(data);
     displayDirectory(data);
 }
 
@@ -118,18 +118,30 @@ submitButton && (submitButton.addEventListener('click', function() {
 // Display the submitCount on the page
 submitButton && (submitButton.textContent = submitCount);
 
-const weatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=Carlsbad&units=metric&appid=0bd19d55bfadd336edf90cb971181d59";
+const weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?q=Carlsbad&units=metric&appid=0bd19d55bfadd336edf90cb971181d59";
 const currentTemp = document.querySelector("#current-temp");
 const weatherIcon = document.querySelector("#weather-icon");
+const weatherIcon1 = document.querySelector("#weather-icon1");
+const weatherIcon2 = document.querySelector("#weather-icon2");
+const weatherIcon3 = document.querySelector("#weather-icon3");
 const captionHumidity = document.querySelector("figcaption");
 const captionDesc = document.querySelector("figcaption");
+const temp1 = document.querySelector("#temp1");
+const temp2 = document.querySelector("#temp2");
+const temp3 = document.querySelector("#temp3")
+const captionDay1 = document.querySelector("figcaption");
+const captionDay2 = document.querySelector("figcaption");
+const captionDay3 = document.querySelector("figcaption");
+
+
+
 
 async function apiFetch() {
     try {
         const response = await fetch(weatherUrl);
         if (response.ok) {
             const data = await response.json();
-            // console.log(data); //this is for testing the call
+            console.log(data); //this is for testing the call
             displayResults(data)
         } else {
             throw Error(await response.text());
@@ -140,17 +152,36 @@ async function apiFetch() {
 }
 
 
+
+
 apiFetch();
 
 function displayResults(weatherData) {
-    currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
+    currentTemp.innerHTML = `<strong>${weatherData.list[0].main.temp.toFixed(0)}</strong>`;
+    temp1.innerHTML = `<strong>${weatherData.list[1].main.temp.toFixed(0)}</strong>`;
+    temp2.innerHTML = `<strong>${weatherData.list[2].main.temp.toFixed(0)}</strong>`;
+    temp3.innerHTML = `<strong>${weatherData.list[3].main.temp.toFixed(0)}</strong>`;
+    // temp1.innerHTML = `<strong>${weatherData.main.temp.toFixed(1)}</strong>`;
 
-    const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-    const desc = weatherData.weather[0].description;
-    const humidity = `${weatherData.main.humidity}%`;
+    const iconsrc = `https://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`;
+    const iconsrc1 = `https://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`;
+    const iconsrc2 = `https://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`;
+    const iconsrc3 = `https://openweathermap.org/img/w/${weatherData.list[0].weather[0].icon}.png`;
+    const desc = weatherData.list[0].weather[0].description;
+    const desc1 = weatherData.list[0].weather[0].description;
+    const desc2 = weatherData.list[0].weather[0].description;
+    const desc3 = weatherData.list[0].weather[0].description;
+    const humidity = `Humidity: ${weatherData.list[0].main.humidity}%`;
 
     weatherIcon.setAttribute("src", iconsrc);
     weatherIcon.setAttribute("alt", desc);
+    weatherIcon1.setAttribute("src", iconsrc1);
+    weatherIcon1.setAttribute("alt", desc1);
+    weatherIcon2.setAttribute("src", iconsrc2);
+    weatherIcon2.setAttribute("alt", desc2);
+    weatherIcon3.setAttribute("src", iconsrc3);
+    weatherIcon3.setAttribute("alt", desc3);
     captionDesc.textContent = desc;
     captionHumidity.textContent = humidity
 }
+

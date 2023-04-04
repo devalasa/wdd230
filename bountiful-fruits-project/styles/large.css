@@ -70,6 +70,36 @@ h1, p {
     font-family: "Montserrat", sans-serif;
 }
 
+.fw {
+    display: flex;
+    text-align: center;
+}
+
+.weather {
+    display: block;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.weather p {
+    font-size: 20px;
+    letter-spacing: 1%;
+    line-height: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+
+figcaption {
+    font-size: 20px;
+    letter-spacing: 1%;
+    line-height: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.three-w {
+    display: flex;
+    justify-content: space-between;
+}
+
 .fresh {
     max-width: 50%;
     text-align: left;
