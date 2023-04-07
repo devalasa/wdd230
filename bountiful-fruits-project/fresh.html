@@ -41,33 +41,46 @@
                 <h1>Fresh Fruit Juice Mixing</h1>
         </header>
         <main>
-            <form action="get" action="#">
+            <form id="fresh-page">
                 <fieldset>
                     <legend>Personal Information</legend>
-                    <label class="top">First Name* <input type="text" name="fname" required></label>
-                    <label class="top">Last Name* <input type="text" name="lname" required></label>
-                    <label class="top">Phone* <input type="tel" name="phone" required></label>
+                    <label class="top">First Name* <input type="text" id="fname" name="fname" required></label>
+                    <label class="top">Last Name* <input type="text" id="lname" name="lname" required></label>
+                    <label class="top">Phone* <input type="tel" id="phone" name="phone" required></label>
                 </fieldset>
                 <fieldset>
                     <legend>Fruit Juice Mix</legend>
                     <label class="top">Fruit 1
-                        <select name="fruit" class="fruit-select">
+                        <select id="fruit" name="fruit" class="fruit-select">
                             
                         </select>
                     </label>
                     <label class="top">Fruit 2
-                        <select name="fruit" class="fruit-select1">
+                        <select id="fruit" name="fruit" class="fruit-select1">
                             
                         </select>
                     </label>
                     <label class="top">Fruit 3
-                        <select name="fruit" class="fruit-select2">
+                        <select id="fruit" name="fruit" class="fruit-select2">
                             
                         </select>
                     </label>
+                    <label class="top">Instructions
+                    </label>                
+                    <textarea class="instructions" name="instructions"></textarea>
                 </fieldset>
                 <input type="submit" value="Mix The Fruits" class="submitBtn" id="submit-button">
             </form>
+
+            <div id="display-info">
+                <p id="fname-display"></p>
+                <p id="lname-display"></p>
+                <p id="phone-display"></p>
+                <p id="fruit-display1"></p>
+                <p id="fruit-display2"></p>
+                <p id="fruit-display3"></p>
+                <p id="instructions-display"></p>
+            </div>
         </main>
         <footer>
             <div id="first_half">

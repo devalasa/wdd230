@@ -26,10 +26,36 @@ const displayDirectory = (fruits) => {
         selects.appendChild(option);
         select1.appendChild(option1);
         select2.appendChild(option2);
+    const freshPage = document.querySelector("#fresh-page");
+    const firstName = document.getElementById('fname-display');
+    const lastName = document.getElementById('lname-display');
+    const phoneN = document.getElementById('phone-display');
+    const submitBtn = document.getElementById("submit-button");
+    const FruitDisplay = document.getElementById("fruit-display1");
+    const FruitDisplay1 = document.getElementById("fruit-display2");
+    const FruitDisplay2 = document.getElementById("fruit-display3");
+    const instructions = document.getElementById("instructions-display");
+        submitBtn.addEventListener("click", (fruit) => {
+            fruit.preventDefault();
+            
+            const fName = document.getElementById('fname').value;
+            const lName = document.getElementById('lname').value;
+            const phone = document.getElementById('phone').value;
+            const selectValue = document.querySelector("select.fruit-select").value;
+            const selectValue1 = document.querySelector("select.fruit-select1").value;
+            const selectValue2 = document.querySelector("select.fruit-select2").value;
+            const inst = document.querySelector(".instructions").value;
+            firstName.textContent = `First Name: ${fName}`;
+            lastName.textContent = `Last Name: ${lName}`;
+            phoneN.textContent = `Phone: ${phone}`;
+            FruitDisplay.textContent = `${selectValue}`;
+            FruitDisplay1.textContent = `${selectValue1}`;
+            FruitDisplay2.textContent = `${selectValue2}`;
+            instructions.textContent = `${inst}`;
+  });
     })
 }
 
-// const
 
 
 // Last modified
@@ -71,7 +97,7 @@ let dayName = daynames[d.getDay()];
 let monthName = months[d.getMonth()];
 let year = d.getFullYear();
 let fulldate = `${dayName}, ${monthName} ${d.getDate()}, ${year}`;
-document.querySelector(".date").textContent = fulldate;
+// document.querySelector(".date").textContent = fulldate;
 let copyYear = `${year} .:|:. Richard O. Ogboanoh .:|:. Nigeria`
 document.querySelector(".copy").textContent = copyYear;
 modEl.innerHTML = `Last Updated: ${modMonth}/${modDay}/${modYear}`;
@@ -132,7 +158,6 @@ const temp3 = document.querySelector("#temp3")
 const captionDay1 = document.querySelector("figcaption");
 const captionDay2 = document.querySelector("figcaption");
 const captionDay3 = document.querySelector("figcaption");
-
 
 
 

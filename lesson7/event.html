@@ -1,0 +1,75 @@
+<!-- HTML form -->
+<form id="myForm">
+    <label for="eventName">Event Name:</label>
+    <input type="text" id="eventName" name="eventName">
+    
+    <label for="eventDate">Event Date:</label>
+    <input type="date" id="eventDate" name="eventDate">
+    
+    <label for="eventTime">Event Time:</label>
+    <input type="time" id="eventTime" name="eventTime">
+    
+    <label for="eventLocation">Event Location:</label>
+    <select id="eventLocation" name="eventLocation"></select>
+    
+    <button type="submit">Add Event</button>
+    
+    <div id="eventInfo">
+      <h2>Event Information</h2>
+      <p id="eventNameDisplay"></p>
+      <p id="eventDateDisplay"></p>
+      <p id="eventTimeDisplay"></p>
+      <p id="eventLocationDisplay"></p>
+      <p id="eventTimezoneDisplay"></p>
+    </div>
+  </form>
+  
+  <!-- JSON data -->
+  <script>
+    const data = {
+      "locations": [
+        {"value": "1", "text": "New York", "timezone": "Eastern Time"},
+        {"value": "2", "text": "Los Angeles", "timezone": "Pacific Time"},
+        {"value": "3", "text": "Chicago", "timezone": "Central Time"}
+      ]
+    };
+  </script>
+  
+  <!-- JavaScript code -->
+  <script>
+    const myForm = document.getElementById('myForm');
+    const eventLocationSelect = document.getElementById('eventLocation');
+    const eventNameDisplay = document.getElementById('eventNameDisplay');
+    const eventDateDisplay = document.getElementById('eventDateDisplay');
+    const eventTimeDisplay = document.getElementById('eventTimeDisplay');
+    const eventLocationDisplay = document.getElementById('eventLocationDisplay');
+    const eventTimezoneDisplay = document.getElementById('eventTimezoneDisplay');
+    
+    // Populate the select element with the options
+    data.locations.forEach(location => {
+      const optionElement = document.createElement('option');
+      optionElement.value = location.value;
+      optionElement.text = location.text;
+      eventLocationSelect.appendChild(optionElement);
+    });
+  
+    myForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      
+      const eventName = document.getElementById('eventName').value;
+      const eventDate = document.getElementById('eventDate').value;
+      const eventTime = document.getElementById('eventTime').value;
+      const selectedLocationValue = eventLocationSelect.value;
+      
+      // Find the selected location in the data object and retrieve its timezone
+      const selectedLocation = data.locations.find(location => location.value === selectedLocationValue);
+      const eventTimezone = selectedLocation.timezone;
+      
+      // Display the event information on the page
+      eventNameDisplay.textContent = `Event name: ${eventName}`;
+      eventDateDisplay.textContent = `Event date: ${eventDate}`;
+      eventTimeDisplay.textContent = `Event time: ${eventTime}`;
+      eventLocationDisplay.textContent = `Event location: ${selectedLocationValue}`;
+      eventTimezoneDisplay.textContent = `Event timezone: ${eventTimezone}`;
+    });
+  </script>
