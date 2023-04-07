@@ -79,6 +79,12 @@
         text-align: center;
         font-size: 1rem;
         margin: 0;
+        animation-name: slideup;
+        animation-duration: 0.5s;
+    }
+
+    .cl-info {
+        padding: 100px 0px 100px 0px;
     }
 
     .fruits {
@@ -92,6 +98,7 @@
 
     .fresh {
         text-align: center;
+        padding-bottom: 100px;
         max-width: 100%;
     }
 

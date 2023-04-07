@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="description" content="Ikeja City Chamber of Commerce">
-    <title>Bountiful Fruits</title>
+    <title>Bountiful Foods</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/large.css">
@@ -20,10 +20,7 @@
     <div id="content">
         <header>
                 <nav class="nav">
-                    <picture>
-                        <source media="(max-width: 500px)" srcset="images/logo-800.png">
                         <a href="index.html"><img class="logo" src="images/logo.png" alt="Website logo"></a>
-                    </picture>
                     <ul id="primaryNav" class="nav-list">
                         <li class="nav-link"><a class="active nav-link" href="index.html">Home</a></li>
                         <li class="nav-link"><a href="fresh.html" class="nav-link">Fresh</a></li>
@@ -45,20 +42,19 @@
                 </nav>
             <section class="hero">
                 <div id="hero_msg">
-                    <h1>Bountiful Fruits</h1>
+                    <h1>Bountiful Foods</h1>
                     <h2>Deliciously</h2>
                     <h2 class="green">healthy</h2>
                     <h2>fruit for life.</h2>
                 </div>
                 <div>
-                    <picture>
+                    <picture class="noview">
                         <source media="(max-width: 500px)" srcset="images/hero-img.jpg">
                         <source media="(max-width: 800px)" srcset="images/hero-img-800.png">
                         <img id="hero_img" src="images/hero-img.png" alt="logo image">
                     </picture>
                 </div>
             </section>
-            <h3 class="date"></h3>
         </header>
         <main>
             <div class="cl-info">
@@ -67,21 +63,21 @@
             </div>
             <div class="fruits">
                 <div>
-                    <picture>
+                    <picture class="noview">
                         <source media="(max-width: 1100px)" srcset="images/apple-800px.png">
                         <img class="img" src="images/apple.png" alt="an apple tree">
                     </picture>
                     <p>Apple</p>
                 </div>
                 <div>
-                    <picture>
+                    <picture class="noview">
                         <source media="(max-width: 1100px)" srcset="images/blueberry-800px.jpg">
                         <img class="img" src="images/blueberry.jpg" alt="a bowl of blueberries">
                     </picture>
                     <p>Blueberry</p>
                 </div>
                 <div>
-                    <picture>
+                    <picture class="noview">
                         <source media="(max-width: 1100px)" srcset="images/grapes-800px.jpg">
                         <img class="img" src="images/grapes.jpg" alt="grapes">
                     </picture>
@@ -93,8 +89,8 @@
                 <div class="fresh">
                     <h1>Call To Action</h1>
                     <p>Juicing involves extracting the liquid from fruits. It allows for easy consumption and increased nutrient intake. Juices are easy to digest and provide a convenient way to consume a variety of fruits. They can also help with hydration. However, juices can have a higher sugar content and lower fiber content than whole fruits. It's important to consume a balanced diet that includes a variety of whole fruits, vegetables, whole grains, and lean proteins.</p>
-                    <h3 id="juice"></h3>
-                    <button><a href="fresh.html">Make a fruit juice</a></button>
+                    <h3 id="juice1"></h3>
+                    <a href="fresh.html">Make a fruit juice</a>
                 </div>
                 <div class="weather-cards">
                 </div>
@@ -103,8 +99,11 @@
                     <p>Carlsbad, Califonia  </p>
                     <p>Today <span id="current-temp"></span> &deg;C</p>
                     <figure>
+                        
                         <img src="#" alt="" id="weather-icon">
                         <figcaption></figcaption>
+                    </figure>
+                    <figure>
                         <figcaption></figcaption>
                     </figure>
                     <div class="three-w">

@@ -104,52 +104,35 @@ let dayName = daynames[d.getDay()];
 let monthName = months[d.getMonth()];
 let year = d.getFullYear();
 let fulldate = `${dayName}, ${monthName} ${d.getDate()}, ${year}`;
-document.querySelector(".date").textContent = fulldate;
-let copyYear = `${year} .:|:. Richard O. Ogboanoh .:|:. Nigeria`
+// document.querySelector(".date").textContent = fulldate;
+let copyYear = `${year} .:|:. Bountiful Foods .:|:. Nigeria`
 document.querySelector(".copy").textContent = copyYear;
 modEl.innerHTML = `Last Updated: ${modMonth}/${modDay}/${modYear}`;
 
-// const juice = document.querySelector("#juice");
-
-// let submitCount = Number(window.localStorage.getItem("submitCount")); 
-
-// // determine if this is the first visit or display the number of visits.
-// if (submitCount !== 0) {
-// 	juice.textContent = submitCount;
-// } else {
-// 	juice.textContent = `This is your first visit!`;
-// }
-
-
-// submitCount++;
-// localStorage.setItem("submitCount", submitCount);
-
-// Get the number of times the form has been submitted
 const juice = document.querySelector("#juice");
-// Get the number of times the form has been submitted
-let submitCount = localStorage.getItem('submitCount');
+const submitBtn = document.querySelector("#submit-button");
+let submitCount = Number(window.localStorage.getItem("submitCount")); 
 
-// If it's the first time the form is being submitted by the user, set the count to 0
-if (!submitCount) {
-  localStorage.setItem('submitCount', 0);
-  juice.innerHTML = `You have not made any fruit juice`;
-}
 
-// Get the submit button element
-const submitButton = document.getElementById('submit-button');
+submitBtn && (submitBtn.addEventListener("click", function() {
+// determine if this is the first visit or display the number of visits.
+    submitCount++;
+    localStorage.setItem("submitCount", submitCount);
+}))
 
-juice.innerHTML = `You have made ${submitCount} fruit juice`;
-// Add a click event listener to the submit button
-submitButton && (submitButton.addEventListener('click', function() {
-  // Increment the submitCount when the user clicks the submit button
-  submitCount++;
-}));
 
 // Get the submitCount from localStorage
 // let submit = localStorage.getItem('submitCount');
 
 // Display the submitCount on the page
-submitButton && (submitButton.textContent = submitCount);
+const juice1 = document.querySelector("#juice1");
+
+if (juice1 !== 0) {
+    juice1.innerHTML = `You have made ${submitCount} fruit juice`
+} else {
+    juice1.innerHTML = `Make a fruit juice now`
+}
+submitBtn && (submitBtn.textContent = submitCount);
 
 const weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?q=Carlsbad&units=metric&appid=0bd19d55bfadd336edf90cb971181d59";
 const currentTemp = document.querySelector("#current-temp");
@@ -217,3 +200,32 @@ function displayResults(weatherData) {
     captionHumidity.textContent = humidity
 }
 
+const imagesToLoad = document.querySelectorAll("source[srcset]");
+
+const loadImage = image => {
+    image.parentNode.classList.add("view");
+    image.onload = () => {
+        image.parentNode.classList.remove("noview");
+    }
+};
+const imgOptions = {
+    threshold: 1,
+    rootMargin: "0px 0px 500px 0px"
+}
+
+const observer = new IntersectionObserver((items, observer) => {
+    items.forEach(item => {
+        if(item.isIntersecting) {
+            loadImage(item.target);
+            observer.unobserve(item.target);
+        }
+    })
+}, imgOptions);
+
+if("IntersectionObserver" in window) {
+    imagesToLoad.forEach(img => {
+        observer.observe(img);
+        });
+}else {
+    imagesToLoad.forEach(img => {loadImage(img)});
+}
