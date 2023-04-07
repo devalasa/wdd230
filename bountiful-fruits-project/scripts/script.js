@@ -8,6 +8,13 @@ async function getDirectoryData() {
     displayDirectory(data);
 }
 
+function toggleMenu() {
+    document.getElementById('primaryNav').classList.toggle('open');
+    document.getElementById('hamburgerBtn').classList.toggle('open');
+}
+const menu = document.getElementById('hamburgerBtn');
+menu.onclick = toggleMenu;
+
 getDirectoryData()
 
 const displayDirectory = (fruits) => {
@@ -48,10 +55,10 @@ const displayDirectory = (fruits) => {
             firstName.textContent = `First Name: ${fName}`;
             lastName.textContent = `Last Name: ${lName}`;
             phoneN.textContent = `Phone: ${phone}`;
-            FruitDisplay.textContent = `${selectValue}`;
-            FruitDisplay1.textContent = `${selectValue1}`;
-            FruitDisplay2.textContent = `${selectValue2}`;
-            instructions.textContent = `${inst}`;
+            FruitDisplay.textContent = `Fruit 1: ${selectValue}`;
+            FruitDisplay1.textContent = `Fruit 2: ${selectValue1}`;
+            FruitDisplay2.textContent = `Fruit 3: ${selectValue2}`;
+            instructions.textContent = `Instructions: ${inst}`;
   });
     })
 }
@@ -97,7 +104,7 @@ let dayName = daynames[d.getDay()];
 let monthName = months[d.getMonth()];
 let year = d.getFullYear();
 let fulldate = `${dayName}, ${monthName} ${d.getDate()}, ${year}`;
-// document.querySelector(".date").textContent = fulldate;
+document.querySelector(".date").textContent = fulldate;
 let copyYear = `${year} .:|:. Richard O. Ogboanoh .:|:. Nigeria`
 document.querySelector(".copy").textContent = copyYear;
 modEl.innerHTML = `Last Updated: ${modMonth}/${modDay}/${modYear}`;

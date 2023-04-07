@@ -9,6 +9,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +20,10 @@
     <div id="content">
         <header>
                 <nav class="nav">
-                    <a href="index.html"><img class="logo" src="images/logo.png" alt="Website logo"></a>
-                    <!-- <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button> -->
+                    <picture>
+                        <source media="(max-width: 500px)" srcset="images/logo-800.png">
+                        <a href="index.html"><img class="logo" src="images/logo.png" alt="Website logo"></a>
+                    </picture>
                     <ul id="primaryNav" class="nav-list">
                         <li class="nav-link"><a class="active nav-link" href="index.html">Home</a></li>
                         <li class="nav-link"><a href="fresh.html" class="nav-link">Fresh</a></li>
@@ -36,43 +40,61 @@
                         <a href="https://twitter.com/" target="_blank">
                             <img class="socs" src="images/icons8-twitter-48.png" alt="twitter logo">
                         </a>
+                        <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
                     </div>
                 </nav>
             <section class="hero">
-                <div class="hero_msg">
+                <div id="hero_msg">
                     <h1>Bountiful Fruits</h1>
-                    <h2>Deliciously <p class="green">healthy</p> fruit for life.</h2>
+                    <h2>Deliciously</h2>
+                    <h2 class="green">healthy</h2>
+                    <h2>fruit for life.</h2>
                 </div>
-                <div><img id="hero_img" src="images/hero-img.png" alt="logo image"></div>
+                <div>
+                    <picture>
+                        <source media="(max-width: 500px)" srcset="images/hero-img.jpg">
+                        <source media="(max-width: 800px)" srcset="images/hero-img-800.png">
+                        <img id="hero_img" src="images/hero-img.png" alt="logo image">
+                    </picture>
+                </div>
             </section>
             <h3 class="date"></h3>
         </header>
         <main>
             <div class="cl-info">
+                <h1>About Delmar, SC</h1>
                 <p>Bountiful Fruits is situated in Del Mar. Del Mar is a small coastal city located in San Diego County, Southern California. It has a population of around 4,500 people and covers an area of 1.8 square miles. Del Mar is known for its beautiful beaches, including the popular Del Mar City Beach, which attracts many surfers, sunbathers, and swimmers. The city also has a long and rich history, dating back to the early 1900s when it was founded as a seaside resort. Today, Del Mar is a popular tourist destination, offering a variety of upscale shops, restaurants, and cultural attractions. In addition to its beaches, Del Mar is also known for its scenic bluffs, which provide stunning views of the Pacific Ocean.</p>
             </div>
             <div class="fruits">
                 <div>
-                    <source media="(max-width: 800px)" srcset="images/apple-800px.png">
-                    <img src="images/apple.png" alt="an apple tree">
+                    <picture>
+                        <source media="(max-width: 1100px)" srcset="images/apple-800px.png">
+                        <img class="img" src="images/apple.png" alt="an apple tree">
+                    </picture>
                     <p>Apple</p>
                 </div>
                 <div>
-                    <source media="(max-width: 800px)" srcset="images/blueberry-800px.jpg">
-                    <img src="images/blueberry.jpg" alt="a bowl of blueberries">
+                    <picture>
+                        <source media="(max-width: 1100px)" srcset="images/blueberry-800px.jpg">
+                        <img class="img" src="images/blueberry.jpg" alt="a bowl of blueberries">
+                    </picture>
                     <p>Blueberry</p>
                 </div>
                 <div>
-                    <source media="(max-width: 800px)" srcset="images/grapes-800px.jpg">
-                    <img src="images/grapes.jpg" alt="grapes">
+                    <picture>
+                        <source media="(max-width: 1100px)" srcset="images/grapes-800px.jpg">
+                        <img class="img" src="images/grapes.jpg" alt="grapes">
+                    </picture>
                     <p>Grapes</p>
                 </div>
 
             </div>
             <div class="fw">
                 <div class="fresh">
+                    <h1>Call To Action</h1>
                     <p>Juicing involves extracting the liquid from fruits. It allows for easy consumption and increased nutrient intake. Juices are easy to digest and provide a convenient way to consume a variety of fruits. They can also help with hydration. However, juices can have a higher sugar content and lower fiber content than whole fruits. It's important to consume a balanced diet that includes a variety of whole fruits, vegetables, whole grains, and lean proteins.</p>
-                    <button><a href="#">Make a fruit juice</a></button>
+                    <h3 id="juice"></h3>
+                    <button><a href="fresh.html">Make a fruit juice</a></button>
                 </div>
                 <div class="weather-cards">
                 </div>
@@ -101,16 +123,16 @@
                     </div>
                 </div>
             </div>
-            <h3 id="juice"></h3>
+            
         </main> 
         <footer>
             <div id="first_half">
                 <div class="fhfh">
                     <img class="fh_logo" src="images/logo.png" alt="webpage logo">
                     <div class="fhfhsh">
-                        <h3>Ikeja City Chamber of Commerce <br>
-                            10 Opebi Road, Opp Sweet Sensation <br>
-                            Ikeja Lagos
+                        <h3>Bountiful Foods<br>
+                            230 10th St, Del Mar, <br>
+                            CA 92014, United States.
                         </h3>
                     </div>
                 </div>

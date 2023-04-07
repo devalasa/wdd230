@@ -1,0 +1,95 @@
+@media screen and (max-width: 65em) {
+    body {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }    
+    
+    .nav {
+        display: flex;
+    }
+
+    #socials {
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .nav button {
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        margin: .2rem;
+        margin-top: -80px;
+    }
+
+    .nav ul {
+        display: none;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul.open {
+        display: block;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .nav ul li a {
+        text-align: center;
+        display: block;
+        padding: .8rem 2vw;
+        text-decoration: none;
+    }
+
+    .nav ul li a:hover {
+        background-color: rgba(0,0,0,0.3);
+    }
+    
+    .nav ul li a.active {
+        background-color: rgba(0,0,0,0.2);
+        color: #28a745;
+    }
+    #hamburgerBtn {
+        display: block;
+    }
+
+    #hamburgerBtn span:nth-child(1) {
+        display: block;
+    }
+
+    #hamburgerBtn span:nth-child(2) {
+        display: none;
+    }
+
+    #hamburgerBtn.open span:nth-child(1) {
+        display: none;
+    }
+
+    #hamburgerBtn.open span:nth-child(2) {
+        display: block;
+    }
+    
+    .hero {
+        max-width: 100%;
+    }
+
+    .cl-info {
+        padding: 0;
+        width: 100%;
+    }
+
+    .fruits {
+        padding: 20px 0px 20px 0px;
+        display: block;
+    }
+
+    .fw {
+        display: block;
+    }
+
+    .fresh {
+        text-align: center;
+        max-width: 100%;
+    }
+}

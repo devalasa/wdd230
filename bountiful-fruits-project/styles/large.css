@@ -28,10 +28,14 @@ body {
     padding-right: 30px;
 }
 
+#hamburgerBtn {
+    display: none;
+}
+
 .hero{
     font-family: "Trirong", serif;
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -39,8 +43,12 @@ body {
     margin: 40px 20px 0px 20px;
 }
 
+
+.date {
+    text-align: center;
+}
+
 h2 {
-    display: flex;
     color:  #343a40;
 }
 
@@ -52,6 +60,7 @@ h2 {
 }
 
 .cl-info {
+    padding: 100px 0px 100px 0px;
     text-align: center;
     font-size: 20px;
     letter-spacing: 1%;
@@ -69,9 +78,29 @@ h1, p {
     text-align: center;
     font-size: 1.5rem;
     font-family: "Montserrat", sans-serif;
+    background-color: #999;
+    border-radius: 10px;
+}
+
+.fruits div {
+    margin-top: 50px;
+}
+
+.img {
+    border-radius: 300px;
+    border: 10px solid #555;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+.img:hover {
+    transform: scale(1.05);
+    transition: transform .5s;
+    box-shadow: 15px 15px 20px #6f7364;
+    
 }
 
 .fw {
+    padding: 100px 0px 100px 0px;
     display: flex;
     text-align: center;
 }
@@ -117,6 +146,7 @@ figcaption {
 .fresh button {
     padding: 15px;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px #6f7364;
 }
 
 .fresh button a {
@@ -202,9 +232,34 @@ form input.submitBtn {
     font-size: 1.1rem;
 }
 
+
+header h1 {
+    text-align: center;
+}
+
+form label.top input, form label.top select {
+    width: 90%;
+}
+
+
+
+#display-info {
+    text-align: center;
+}
+
 .instructions {
-    padding: 5rem;
+    padding: 10px;
+    width: 90%;
+    max-width: 20rem;
+    height: 20vh;
     border-radius: 10px;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1%;
+    line-height: 30px;
 }
 
 /* ABOUT US PAGE */
