@@ -206,6 +206,7 @@ form label.top {
     padding-top: 1rem;
     color: #343a40;
     font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
 }
 
 form label.top input, form label.top select {

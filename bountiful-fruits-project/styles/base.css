@@ -117,6 +117,10 @@
         width: 90%;
     }
 
+    form label.top {
+        font-size: 20px;
+    }
+
     #display-info {
         text-align: center;
     }
