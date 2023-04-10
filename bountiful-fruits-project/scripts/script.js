@@ -21,18 +21,19 @@ const displayDirectory = (fruits) => {
     const selects = document.querySelector("select.fruit-select");
     const select1 = document.querySelector("select.fruit-select1");
     const select2 = document.querySelector("select.fruit-select2");
+
     fruits.forEach((fruit) => {
         let option = document.createElement("option");
         let option1 = document.createElement("option");
-        let option2 = document.createElement("option") 
+        let option2 = document.createElement("option"); 
         option.textContent = `${fruit.name}`;
         option1.textContent = `${fruit.name}`;
         option2.textContent = `${fruit.name}`;
 
-
         selects.appendChild(option);
         select1.appendChild(option1);
         select2.appendChild(option2);
+
     const freshPage = document.querySelector("#fresh-page");
     const firstName = document.getElementById('fname-display');
     const lastName = document.getElementById('lname-display');
@@ -59,6 +60,40 @@ const displayDirectory = (fruits) => {
             FruitDisplay1.textContent = `Fruit 2: ${selectValue1}`;
             FruitDisplay2.textContent = `Fruit 3: ${selectValue2}`;
             instructions.textContent = `Instructions: ${inst}`;
+            fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
+            .then(response => response.json())
+              .then(data => {
+                  // Calculate the total nutritions based on the selected fruits
+                  const selectedFruitNutrient = {
+                      carbohydrates: 0,
+                      protein: 0,
+                      fat: 0,
+                      calories: 0,
+                      sugar: 0,
+                  }
+                  
+                  const selectedFruits = [selectValue, selectValue1, selectValue2];
+                  data.forEach(fruit => {
+                  if (selectedFruits.includes(fruit.name)) {
+                      selectedFruitNutrient.carbohydrates += fruit.nutritions.carbohydrates;
+                      selectedFruitNutrient.protein += fruit.nutritions.protein;
+                      selectedFruitNutrient.fat += fruit.nutritions.fat;
+                      selectedFruitNutrient.calories += fruit.nutritions.calories;
+                      selectedFruitNutrient.sugar += fruit.nutritions.sugar;
+                      }
+                const carbohydrates = document.querySelector("#carbohydrate"); 
+                const protein = document.querySelector("#protein");
+                const fat = document.querySelector("#fat");
+                const calories = document.querySelector("#calories");
+                const sugar = document.querySelector("#sugar");
+                carbohydrates.innerHTML = `Carbohydrates: ${selectedFruitNutrient.carbohydrates.toFixed(2)}`;
+                protein.innerHTML = `Protein: ${selectedFruitNutrient.protein.toFixed(2)}`;
+                fat.innerHTML = `Fat: ${selectedFruitNutrient.fat.toFixed(2)}`;
+                calories.innerHTML = `Calories: ${selectedFruitNutrient.calories.toFixed(2)}`;
+                sugar.innerHTML = `Sugar: ${selectedFruitNutrient.sugar.toFixed(2)}`;
+                  })
+                  });
+
   });
     })
 }
@@ -104,7 +139,7 @@ let dayName = daynames[d.getDay()];
 let monthName = months[d.getMonth()];
 let year = d.getFullYear();
 let fulldate = `${dayName}, ${monthName} ${d.getDate()}, ${year}`;
-// document.querySelector(".date").textContent = fulldate;
+document.querySelector("#date").textContent = `Order Date: ${fulldate}`;
 let copyYear = `${year} .:|:. Bountiful Foods .:|:. Nigeria`
 document.querySelector(".copy").textContent = copyYear;
 modEl.innerHTML = `Last Updated: ${modMonth}/${modDay}/${modYear}`;
